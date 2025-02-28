@@ -3,7 +3,7 @@ const connectDB = require('./config/db');
 const cors = require('cors');
 const newsRoutes = require('./routes/newsRoutes');
 require('dotenv').config();
-const { scrapeAndSaveNews } = require('./controllers/newsController');
+const { scrapeAndSaveNews } = require('./Controllers/newsController');
 const cron = require('node-cron');
 
 const app = express();

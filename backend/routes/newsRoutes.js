@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getAllNews, getNewsByCategory, scrapeAndSaveNews } = require('../controllers/newsController'); // Check path
+const { getAllNews, getNewsByCategory, scrapeAndSaveNews } = require('../Controllers/newsController'); // Check path
 
 router.get('/all', getAllNews);
 router.get('/category/:category', getNewsByCategory); 

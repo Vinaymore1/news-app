@@ -31,6 +31,10 @@ cron.schedule('0 */6 * * *', async () => {
   timezone: "Asia/Kolkata" 
 });
 
+app.get('/', (req, res) => {
+  res.send('🚩 Jai Shree Ram 🚩');
+});
+
 app.use('/api', newsRoutes);
 
 const PORT = process.env.PORT || 5000;

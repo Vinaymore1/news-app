@@ -51,7 +51,6 @@ const getNewsByCategory = async (req, res) => {
 const scrapeAndSaveNews = async (req, res) => {
     try {
         const articles = await scrapeNews();
-        // console.log('Scraped Articles:', articles);
 
         if (!articles || articles.length === 0) {
             return res.status(500).json({ message: 'No articles scraped' });

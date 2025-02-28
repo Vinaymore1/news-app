@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+.env
+# Dependency directories
+node_modules/
+.pnp/
+.pnp.js
+
+# Editor & OS-specific files
+*.swp
+*.swo
+*.swn
+Thumbs.db

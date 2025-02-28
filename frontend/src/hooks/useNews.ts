@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Article, NewsResponse } from '../types/news';
 
 // Base API URL
-const BASE_API_URL = 'http://localhost:5000/api';
+const BASE_API_URL = 'https://news-app-2-cwaa.onrender.com';
 
 export const useNews = (category?: string) => {
   const [articles, setArticles] = useState<Article[]>([]);

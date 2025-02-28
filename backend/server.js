@@ -18,18 +18,18 @@ app.use(cors({
 
 connectDB();
 
-cron.schedule('0 */6 * * *', async () => {
-  console.log('Running scheduled news scraping task...');
-  try {
-      await scrapeAndSaveNews();
-      console.log('News scraping completed successfully!');
-  } catch (error) {
-      console.error('Error running scheduled scraping:', error);
-  }
-}, {
-  scheduled: true,
-  timezone: "Asia/Kolkata" 
-});
+// cron.schedule('0 */6 * * *', async () => {
+//   console.log('Running scheduled news scraping task...');
+//   try {
+//       await scrapeAndSaveNews();
+//       console.log('News scraping completed successfully!');
+//   } catch (error) {
+//       console.error('Error running scheduled scraping:', error);
+//   }
+// }, {
+//   scheduled: true,
+//   timezone: "Asia/Kolkata" 
+// });
 
 app.get('/', (req, res) => {
   res.send('🚩 Jai Shree Ram 🚩');

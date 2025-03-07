@@ -19,7 +19,7 @@ export const SearchPage: React.FC = () => {
   return (
     <div className="container mx-auto px-4">
       <h1 className="text-4xl font-bold mb-8">Search Results for "{query}"</h1>
-      <NewsGrid articles={filteredArticles} />
+      <NewsGrid articles={filteredArticles} category={'news'} />
     </div>
   );
 };

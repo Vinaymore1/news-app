@@ -12,3 +12,7 @@ export interface Article {
   export interface NewsResponse {
     articles: Article[];
   }
+
+  export interface category {
+    category: string
+  }

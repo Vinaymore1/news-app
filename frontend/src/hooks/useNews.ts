@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Article, NewsResponse } from '../types/news';
 
-// Base API URL
+
 const BASE_API_URL = 'https://news-app-2-cwaa.onrender.com/api';
 
 export const useNews = (category?: string) => {
@@ -13,9 +13,6 @@ export const useNews = (category?: string) => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        // Construct the correct URL based on whether a category is provided
-        // If category is undefined or "news", use the default /api/category/news endpoint
-        // Otherwise use /api/category/{category} endpoint
         const endpoint = category && category !== 'news' 
           ? `${BASE_API_URL}/category/${category}`
           : `${BASE_API_URL}/category/news`;

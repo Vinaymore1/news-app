@@ -5,8 +5,8 @@ import { Button } from '../components/ui/button';
 import { Clock, User, Calendar, ArrowLeft, Share2 } from 'lucide-react';
 
 export const ArticlePage = () => {
-  const { url } = useParams();
-  const { articles, loading, error } = useNews();
+  const { url , category} = useParams();
+  const { articles, loading, error } = useNews(category);
   const navigate = useNavigate();
   
   if (loading) {
@@ -76,11 +76,9 @@ export const ArticlePage = () => {
     );
   }
 
-  // Try to find article by URL
   const decodedUrl = url ? decodeURIComponent(url) : '';
   const article = articles.find((a) => a.url === decodedUrl);
   
-  // Handle article not found
   if (!article) {
     return (
       <div className="container mx-auto px-4 py-16 max-w-4xl">

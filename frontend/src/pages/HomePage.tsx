@@ -16,7 +16,7 @@ export const HomePage: React.FC = () => {
   
     try {
       const encodedText = encodeURIComponent(inputText);
-      const response = await fetch(`http://127.0.0.1:5001/predict?text=${encodedText}`, {
+      const response = await fetch(`https://realorfake.onrender.com/predict?text=${encodedText}`, {
         method: 'GET',
       });
   

@@ -25,10 +25,10 @@ export const Header: React.FC = () => {
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
             {/* Logo */}
+            {/* Logo */}
             <Link to="/" className="text-2xl font-bold tracking-tight hover:opacity-90 transition-opacity">
               NewsHub
             </Link>
-
             {/* Desktop Search */}
             <div className="hidden md:block w-1/3 max-w-md">
               <SearchBar />
